@@ -11,5 +11,5 @@ export type Invoice = {
   recipientAddress: string
   currency: string
   note: string
-  items: Array<Item>
+  items: Item[]
 }

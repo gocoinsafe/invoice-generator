@@ -24,7 +24,7 @@ const InvoicePreview = ({ invoice }: Props) => {
   const previewRef = useRef<HTMLDivElement>(null)
   const reactToPrintFn = useReactToPrint({
     contentRef: previewRef,
-    documentTitle: `Invoice${today.replace(/-/g, "")}`,
+    documentTitle: `Invoice_${today.replace(/-/g, "")}`,
   })
 
   const getAmount = (quantity: number = 1, price: number = 0) => {

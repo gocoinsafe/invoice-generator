@@ -26,8 +26,12 @@ const InvoiceForm = ({ invoice, setInvoice }: Props) => {
   const updateItem = (index: number, field: keyof Item, value: string) => {
     setInvoice((prev: Invoice) => {
       const newItems = [...prev.items]
-      newItems[index][field] =
-        field === "name" ? (value as string) : Number(value)
+      // newItems[index][field] =
+      //   field === "name" ? (value as string) : Number(value)
+      newItems[index] = {
+        ...newItems[index],
+        [field]: field === "name" ? (value as string) : Number(value),
+      }
       return { ...prev, items: newItems }
     })
   }
