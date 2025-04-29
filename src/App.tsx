@@ -1,5 +1,3 @@
-import { HOMEBASE } from "./config"
-
 function App() {
   return (
     <div className="flex flex-col w-full h-screen items-center justify-between text-center py-10">
@@ -15,7 +13,7 @@ function App() {
       </h1>
 
       <a
-        href={`${HOMEBASE}/invoice`}
+        href={`/#/invoice`}
         className="underline text-2xl !text-white w-[300px] py-2 rounded-[6px] mx-auto bg-lime-500 hover:bg-lime-400"
       >
         👉 Start Creating Invoice
